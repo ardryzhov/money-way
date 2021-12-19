@@ -1,0 +1,34 @@
+// Settings
+
+@import '_reset';
+@import '_vars';
+@import '_mixin';
+
+// Components
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body {
+	background: linear-gradient(to bottom, #000 0%, #ccc 60%, #fff 100%);
+	box-sizing: border-box;
+	overflow-x: hidden;
+	font-family: 'Ubuntu', sans-serif;
+	height: 100%;
+}
+
+@import './components/_header';
+@import './components/_main-title';
+@import './components/_yields';
+@import './components/_rates';
+@import './components/_content-card';
+@import './components/_footer';
+@import './components/_scroll-to-top';
+@import './components/_modal';
+@import './components/_success-modal';
+
+// Responsive
+
+@import './components/_responsive';

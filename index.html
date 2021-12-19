@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+	<link rel="manifest" href="favicon/site.webmanifest">
+	<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+	<link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,500&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style/style.css">
+	<script src="script/wow.min.js"></script>
+	<script>
+		new WOW().init();
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<title>Money Way — твой билет в мир инвестиций</title>
+</head>
+<body id='top_scroll'>
+	<header id="header">
+		<div class="header-wrapper">
+			<div class="header__image">
+				<img src="img/money_way.png" alt="money-way">
+			</div>
+
+			<nav class="header__navbar">
+				<div class="navbar__item">
+					<a href='#yield_scroll' class='scrl'>Доходность</a>
+				</div>
+				<div class="navbar__item">
+					<a href='#rate_scroll' class='scrl'>Тарифы</a>
+				</div>
+				<div class="navbar__item">
+					<a href='#spec_scroll' class='scrl'>Наши специалисты</a>
+				</div>
+				<div class="navbar__item">
+					<a href='#' class="btn_open_modal">Заказать звонок</a>
+				</div>
+				<div class="header__navbar-burger">
+					<span class="navbar__burger"></span>
+				</div>
+				<div class="header__navbar-burger_menu">
+					<div class="navbar__item-burger-menu">
+						<a href='#yield_scroll' class='scrl'>Доходность</a>
+					</div>
+					<div class="navbar__item-burger-menu">
+						<a href='#rate_scroll' class='scrl'>Тарифы</a>
+					</div>
+					<div class="navbar__item-burger-menu">
+						<a href='#spec_scroll' class='scrl'>Наши специалисты</a>
+					</div>
+					<div class="navbar__item-burger-menu">
+						<a href='#' class="btn_open_modal">Заказать звонок</a>
+					</div>
+				</div>
+			</nav>
+		</div>
+	</header>
+
+	<div class="content-wrapper">
+		<div class="content__page_title">
+			<div class="page_title__text">
+				<span class="animate__animated animate__fadeIn">Пришло время зарабатывать. </span>
+				<span class="animate__animated animate__fadeIn animate__delay-1s">Присоединяйся к команде.</span>
+			</div>
+			<div class="page_title">
+				<span class="animate__animated animate__fadeIn animate__delay-2s">Money Way</span>
+			</div>
+		</div>
+
+		<div id='yield_scroll' class="content__yield">
+			<div class="content__yield_title">
+				<span class='wow animate__animated animate__fadeIn'>Доходность выше лидеров рынка.</span>
+			</div>
+
+			<div class="content__yield-example">
+				<div class="example-yield wow animate__animated animate__fadeInLeft">
+					<div class="yield__title">
+						<h3>S&P 500</h3>
+					</div>
+					<div class="yield__text">
+						<span>S&P-500 — взвешенный по рыночной капитализации индекс акций 500 корпораций, которые представлены в нем в следующей пропорции: 400 промышленных корпораций, 20 транспортных, 40 финансовых и 40 коммунальных компаний. 
+						Ключевые компоненты индекса — Apple, Microsoft, Amazon.com, Facebook, ExxonMobil, Johnson & Johnson, Berkshire Hathaway, JPMorgan Chase и Alphabet (материнская компания Google).
+						Доходность S&P 500 за 2020г. — 35.9% </span>
+					</div>
+					<div class="yield-sp__image">
+						<div class="chart-sp">
+							<canvas id='SP'></canvas>
+					 </div>
+					</div>
+				</div>
+
+				<div class="example-yield wow animate__animated animate__fadeInUp">
+					<div class="yield-nas__title yield__title">
+						<h3>NASDAQ Composite</h3>
+					</div>
+					<div class="yield__text">
+						<span>NASDAQ Composite Index — сводный взвешенный по капитализации индекс, который включает в себя более 3000 ценных бумаг высокотехнологичных и быстро растущих компаний, котирующихся на фондовой бирже Nasdaq. 
+						В отличие от других рыночных индексов, Nasdaq Composite не ограничивается компаниями, базирующимися в США.
+						Ключевые компоненты индекса — Activision Blizzard, Adobe Systems Incorporated, Alexion Pharmaceuticals, Align Technology Inc., Alphabet Inc. Class A, Alphabet Inc. Class C, Amazon.com, Inc., American Electric Power.
+						Доходность NASDAQ за 2020г. — 37.53%</span>
+					</div>
+					<div class="yield-nas__image">
+						<div class="chart-nasd">
+							<canvas id='Nasd'></canvas>
+					 </div>
+					</div>
+				</div>
+
+				<div class="example-yield wow animate__animated animate__fadeInRight">
+					<div class="yield__title">
+						<h3>Dow Jones Industrial</h3>
+					</div>
+					<div class="yield__text">
+						<span>Промышленный индекс Доу-Джонса показывает изменения котировок акций 30 крупнейших корпораций США. Каждая компания в составе Индекса оказывает на индекс одинаковое влияние независимо от своей капитализации.
+						Ключевые компоненты индекса — Exxon Mobil Corporation, Microsoft Corporation, Johnson & Johnson, General Electric Company, Wal-Mart Stores, Inc., JPMorgan Chase & Co., Chevron Corporation, The Procter & Gamble, AT&T Inc., The Coca-Cola Company,  Visa Inc, The Walt Disney Company, Verizon Communications.
+						Доходность Dow Jones Industrial за 2020г. — 29.72%</span>
+					</div>
+					<div class="yield-dow__image">
+						<div class="chart-dj">
+							<canvas id='DJ'></canvas>
+					 </div>
+					</div>
+				</div>
+
+				<div class="example-yield yield-mw wow animate__animated animate__fadeInUp">
+					<div class="yield__title yield-mw-title">
+						<h3>Money Way</h3>
+					</div>
+					<div class="yield-mw_slider-window">
+						<div class="yield-mw_slider-line">
+							<div class="yield__mw-flex mw_slider-item active-slide">
+								<div class="yield__text yield-mw-text">
+									<span>Мы используем агрессивно-умеренную стратегию инвестирования, что позволяет иметь высокую доходность за счет недооцененных бумаг и так же, так называемых «голубых фишек», уже сформировавшихся компаний, ежегодно показывающих стабильный рост. Основным отличием Money Way от других индексных фондов является то, что мы покупаем акции не только двух-трёх самых развитых стран, а ищем прибыльных и быстро ростущих эмитентов по всему миру.</span>
+								</div>
+								<div class="yield-mw__image yield-mw-img">
+									<div class="chart-mw">
+										<canvas id='moneyWay'></canvas>
+								 </div>
+								</div>
+							</div>
+	
+							<div class="yield__mw-type mw_slider-item">
+								<div class="mw_type-title">
+									<h3>Виды акций в портфеле</h3>
+								</div>
+								<div class="mw_type-text">
+									<div><i class="fas fa-train"></i> <span>Локомотивы</span> — компании, показавшие за последнии 5 лет среднегодовую доходность не менее 17%, с прозрачным бизнесом и уверенной политикой на ближайшее 5 лет. Акции таких компаний берутся на долгосрочную перспективу.</div>
+									<div><i class="fas fa-rocket"></i><span>Будущие ракеты</span> — компании, которые не имеют за плечами высокодоходного прошлого, но при этом на горизонте одного года имеют высокий шанс вырасти на 20-23%. Акции таких компаний берутся на краткосрочную перспективу и раз в 3 месяца проверяются.</div>
+									<div><i class="fab fa-gripfire"></i><span>Здесь и сейчас</span> — малоизвестные компании, которые могут вырасти на фоне какого-либо обстоятельства из вне. Акции таких компаний берутся на один-два месяца, и при достижении доходности в 10% продаются. </div>
+								</div>
+							</div>
+	
+							<div class="yield__mw-sectors mw_slider-item">
+								<div class="mw-sectors_title">
+									<h3 style='margin-bottom: 10px;'>Сектора портфеля (в %)</h3>
+								</div>
+								<div class="chart-mw-pie" style='margin: 0 auto;'>
+									<canvas style='height: 200px' id="money_way"></canvas>
+								 </div>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="btns__slider">
+						<div class="btn-slider active-slide-btn"></div>
+						<div class="btn-slider"></div>
+						<div class="btn-slider"></div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<div id='rate_scroll' class="content__rates">
+
+			<div class="rates__title">
+				<h3>Тарифы</h3>
+			</div>
+
+			<div class="rates__container">
+
+				<div class="rate">
+					<div class="rate__title">
+						<h3>Инвестор</h3>
+					</div>
+
+					<div class="rate__card">
+						
+						<div class="rate__card_items">
+							<div class="rate__card_item"><i class="fab fa-telegram-plane"></i><span>Доступ в Telegramm-канал, где 3 раза в неделю постят интересные инвест-идеи.</span></div>
+							<div class="rate__card_item"><i class="fas fa-info"></i><span>Служба-поддержки 24/7.</span></div>
+							<div class="rate__card_item"><i class="fas fa-link"></i><span>Ссылки на российские/зарубежные ресурсы с аналитикой акций.</span></div>
+						</div>
+
+						<div class="rate__card_prices">
+							<input type="radio" name='radio-select' data-month='1' data-price='449' id='radio-4' class="rate-radio" value='Инвестор'>
+							<label for="radio-4">
+								<div class="rate__card_price"><span>1 мес.:</span><span>449 ₽ </span><span class="del-price">599 ₽</span></div>
+							</label>
+							<input type="radio" name='radio-select' data-month='3' data-price='1230' id='radio-5' class="rate-radio" value='Инвестор'>
+							<label for="radio-5">
+								<div class="rate__card_price"><span>3 мес.: </span> <span>1230 ₽ </span><span class="del-price">1650 ₽</span></div>
+							</label>
+							<input type="radio" name='radio-select' data-month='6' data-price='2385' id='radio-6' class="rate-radio" value='Инвестор'>
+							<label for="radio-6">
+								<div class="rate__card_price"><span>6 мес.: </span> <span>2385 ₽ </span><span class="del-price">3180 ₽</span></div>
+							</label>
+						</div>
+
+						<div class="rate__card_btn">
+							<button>Заказать звонок</button>
+						</div>
+						
+					</div>
+
+				</div>
+
+				<div class="rate">
+					<div class="rate__title">
+						<h3>Трейдер</h3>
+					</div>
+
+					<div class="rate__card">
+						
+						<div class="rate__card_items">
+							<div class="rate__card_item"><i class="fab fa-telegram-plane"></i><span>Доступ в Telegramm-канал, где каждый день постят инвест-идеи для трейдинга.</span></div>
+							<div class="rate__card_item"><i class="fas fa-info"></i><span>Служба-поддержки 24/7.</span></div>
+							<div class="rate__card_item"><i class="fas fa-link"></i><span>Ссылки на российские/зарубежные ресурсы с аналитикой акций.</span></div>
+							<div class="rate__card_item"><i class="fas fa-question"></i><span>Личный консультант по трейдингу.</span></div>
+						</div>
+
+						<div class="rate__card_prices">
+							<input type="radio" name='radio-select' data-month='1' data-price='675' id='radio-1' class="rate-radio" value='Трейдер'>
+							<label for="radio-1">
+								<div class="rate__card_price"><span>1 мес.:</span><span>675 ₽ </span><span class="del-price">899 ₽</span></div>
+							</label>
+							<input type="radio" name='radio-select' data-month='3' data-price='1725' id='radio-2' class="rate-radio" value='Трейдер'>
+							<label for="radio-2">
+								<div class="rate__card_price"><span>3 мес.: </span> <span>1725 ₽ </span><span class="del-price">2300 ₽</span></div>
+							</label>
+							<input type="radio" name='radio-select' data-month='6' data-price='3099' id='radio-3' class="rate-radio" value='Трейдер'>
+							<label for="radio-3">
+								<div class="rate__card_price"><span>6 мес.: </span> <span>3099 ₽ </span><span class="del-price">3999 ₽</span></div>
+							</label>
+						</div>
+
+						<div class="rate__card_btn">
+							<button>Заказать звонок</button>
+						</div>
+						
+					</div>
+
+				</div>
+
+				<div class="rate">
+					<div class="rate__title">
+						<h3>All inclusive</h3>
+					</div>
+
+					<div class="rate__card">
+						
+						<div class="rate__card_items">
+							<div class="rate__card_item"><i class="fab fa-telegram-plane"></i><span>Доступ в Telegramm-канал, где 3 раза в неделю постят интересные инвест-идеи и каждый день публикуют инвест-идеи для трейдинга.</span></div>
+							<div class="rate__card_item"><i class="fas fa-info"></i><span>Служба-поддержки 24/7.</span></div>
+							<div class="rate__card_item"><i class="fas fa-link"></i><span>Ссылки на российские/зарубежные ресурсы с аналитикой акций.</span></div>
+							<div class="rate__card_item"><i class="fas fa-question"></i></i><span>Личный консультант как по трейдингу, так и по долгосрочным инвест-идеям.</span></div>
+							<div class="rate__card_item"><i class="fas fa-chart-bar"></i><span>Проведение до 10 технических анализов компаний в месяц от профессионалов по запросу в telegram.</span></div>
+						</div>
+
+						<div class="rate__card_prices">
+							<input type="radio" name='radio-select' data-month='1' data-price='1299' id='radio-7' class="rate-radio" value='All inclusive'>
+							<label for="radio-7">
+								<div class="rate__card_price"><span>1 мес.:</span><span>1299 ₽ </span><span class="del-price">1699 ₽</span></div>
+							</label>
+							<input type="radio" name='radio-select' data-month='3' data-price='3459' id='radio-8' class="rate-radio" value='All inclusive'>
+							<label for="radio-8">
+								<div class="rate__card_price"><span>3 мес.: </span> <span>3459 ₽ </span><span class="del-price">4599 ₽</span></div>
+							</label>
+							<input type="radio" name='radio-select' data-month='6' data-price='6399' id='radio-9' class="rate-radio" value='All inclusive'>
+							<label for="radio-9">
+								<div class="rate__card_price"><span>6 мес.: </span> <span>6399 ₽ </span><span class="del-price">8499 ₽</span></div>
+							</label>
+						</div>
+
+						<div class="rate__card_btn">
+							<button>Заказать звонок</button>
+						</div>
+						
+					</div>
+
+				</div>
+
+
+			</div>
+
+		</div>
+
+		<div id='spec_scroll' class="content__card">
+			<div class="content__card_title">
+				<h3>Наши специалисты.</h3>
+			</div>
+
+			<div class="content__card_container">
+				<div class="card__container">
+
+					<div class="card__person card-1" style="--i:-1;">
+						<div class="card__top">
+							<div class="card__front">
+								<div class="card__person_title">
+									<span>Tyler <br> Joseph</span>
+								</div>
+								<button class="card__btn">Профиль <i class="fa fa-arrow-right"></i></button>
+							</div>
+						</div>
+
+						<div class="card__info">
+							<button class="card__btn_c"><i class="fas fa-angle-down"></i></button>
+							<p class="finance_analytic">IT-сектор</p>
+							<hr>
+							<div class="card__info_career">Обладает 12-ти летним опытом работы в области управления активами. До прихода в компанию «Money Way» работал в УК «МДМ», где отвечал за формирование портфелей акций. Получил степень бакалавра финансов в Унивеститете Штата Аляска.</div>
+						</div>
+					</div>
+
+					<div class="card__person card-2" style="--i:0;">
+						<div class="card__top">
+							<div class="card__front">
+								<div class="card__person_title">
+									<span>Chloë <br> Moretz</span>
+								</div>
+								<button class="card__btn">Профиль <i class="fa fa-arrow-right"></i></button>
+							</div>
+						</div>
+
+						<div class="card__info">
+							<button class="card__btn_c"><i class="fas fa-angle-down"></i></button>
+							<p class="finance_analytic">Промышленный сектор</p>
+							<hr>
+							<div class="card__info_career">В начале 2020 года присоединилась к компании «Money Way», где отвечает за управление активами на российском фондовом рынке. Имеет квалификационные аттестаты ФСФР 1.0 и 5.0.</div>
+						</div>
+					</div>
+
+					<div class="card__person card-3" style="--i:1;">
+						<div class="card__top">
+							<div class="card__front">
+								<div class="card__person_title">
+									<span>Josh <br>Dun</span>
+								</div>
+								<button class="card__btn">Профиль <i class="fa fa-arrow-right"></i></button>
+							</div>
+						</div>
+
+						<div class="card__info">
+							<button class="card__btn_c"><i class="fas fa-angle-down"></i></button>
+							<p class="finance_analytic">Сектор недвижимости</p>
+							<hr>
+							<div class="card__info_career">Окончил Байкальский Государственный Университет Экономики и Права по специальности «Мировая экономика» и имеет квалификационные аттестаты ФСФР 1.</div>
+						</div>
+					</div>
+
+					<div class="card__person card-4" style="--i:2;">
+						<div class="card__top">
+							<div class="card__front">
+								<div class="card__person_title">
+									<span>Elizabeth <br> Olsen</span>
+								</div>
+								<button class="card__btn">Профиль <i class="fa fa-arrow-right"></i></button>
+							</div>
+						</div>
+
+						<div class="card__info">
+							<button class="card__btn_c"><i class="fas fa-angle-down"></i></button>
+							<p class="finance_analytic">Финансовый сектор</p>
+							<hr>
+							<div class="card__info_career">Окончила национальный исследовательский университет «Высшая школа экономики». До прихода в «Money Way» работала управляющим активами в «ВТБ Капитал Управление Активами», до этого - портфельным менеджером в УК «КапиталЪ».</div>
+						</div>
+					</div>
+
+					<div class="card__person card-5" style="--i:3;">
+						<div class="card__top">
+							<div class="card__front">
+								<div class="card__person_title">
+									<span>Ryan <br> Gosling</span>
+								</div>
+								<button class="card__btn">Профиль <i class="fa fa-arrow-right"></i></button>
+							</div>
+						</div>
+
+						<div class="card__info">
+							<button class="card__btn_c"><i class="fas fa-angle-down"></i></button>
+							<p class="finance_analytic">Энергетический сектор</p>
+							<hr>
+							<div class="card__info_career">В 2012 году окончил Государственный университет управления по специальности «Финансы, денежное обращение и кредит». На фондовом рынке с 2012 года. До «Money Way» работал управляющим активами в ЗАО УК «Инвестиционный стандарт».</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+
+		
+
+	</div>
+
+	<footer id="footer">
+			<div class="footer__promo">
+				<div class="footer__promo_title">
+					<span>Акция!</span><br>
+					<span>Успей сделать заказа до <span class="promo_end_day"></span><span class="promo_end_month"></span></span>
+					<span>и получи скидку в 25 %</span>
+				</div>
+				<div class="promo__timer">
+					<div>До конца акции осталось:</div>
+					<div class="timer__counter">
+						<div class="time_count days"></div>
+						<div class="time_count hours"></div>
+						<div class="time_count minutes"></div>
+						<div class="time_count seconds"></div>
+					</div>
+					<div class="timer__date">
+						<div class="time_date">День</div>
+						<div class="time_date">Часов</div>
+						<div class="time_date">Минут</div>
+						<div class="time_date">Секунд</div>
+					</div>
+				</div>
+			</div>
+	</footer>
+
+	<div class="scrl-to-top hide">
+		<a href="#top_scroll"><i class="fas fa-angle-double-up"></i></a>
+	</div>
+
+	<div class="modal__wrapper hide-modal">
+		<div class="modal">
+			<div class="modal__title">
+				<h3>Связаться со мной:</h3>
+				<span class="modal__close"><i class="fas fa-times"></i></span>
+			</div>
+	
+			<div class="modal__content">
+
+			<form action="#" id='modal__form' class="modal__content_inputs">
+				<div class="input-field">
+					<input class="input_check" name='fName' type="text" required='required'>
+					<span class="input_text">Имя</span>
+					<span class="input_line"></span>
+					<span class="form_check_valid"></span>
+				</div>
+				<div class="input-field">
+					<input class="input_check" name='lName' type="text" required='required'>
+					<span class="input_text">Фамилия</span>
+					<span class="input_line"></span>
+					<span class="form_check_valid"></span>
+				</div>
+				<div class="input-field">
+					<input class="input_check" name='email' type="email" required='required'>
+					<span class="input_text">Email</span>
+					<span class="input_line"></span>
+					<span class="form_check_valid"></span>
+				</div>
+				<div class="input-field">
+					<input class="input_check" name='phone' type="tel" required='required'>
+					<span class="input_text">Телефон</span>
+					<span class="input_line"></span>
+					<span class="form_check_valid"></span>
+				</div>
+
+			</form>
+
+			<div class="modal__content_rate">
+				<div class="modal__rate_title">
+					<h3>Выберите тариф:</h3>
+				</div>
+
+				<div class="modal__rate_check">
+					<div class="modal__rate_variable">
+
+						<div class="rate_variable_title">
+							<span>Инвестор:</span>
+						</div>
+						
+						
+
+						<div class="rate_variables">
+							<input type="radio" name='radio-select' id="radio-modal-1" data-month='1' data-price='449' value="Инвестор" class='rate-radio'>
+							<label for="radio-modal-1">
+								<div class="rate_variable">
+									<div class="variable_month">1 мес.</div>
+									<div class="variable_price">
+										<span class="v-actual-price">449 ₽</span>
+										<span class="v-del-price">599 ₽</span>
+									</div>
+								</div>
+							</label>
+
+							<input type="radio" name='radio-select' id="radio-modal-2" data-month='3' data-price='1230' value="Инвестор" class='rate-radio'>
+							<label for="radio-modal-2">
+								<div class="rate_variable">
+									<div class="variable_month">3 мес.</div>
+									<div class="variable_price">
+										<span class="v-actual-price">1230 ₽</span>
+										<span class="v-del-price">1650 ₽</span>
+									</div>
+								</div>
+							</label>
+							
+							<input type="radio" name='radio-select' data-month='6' data-price='2385' id="radio-modal-3" value="Инвестор" class='rate-radio'>
+							<label for="radio-modal-3">
+								<div class="rate_variable">
+									<div class="variable_month">6 мес.</div>
+									<div class="variable_price">
+										<span class="v-actual-price">2385 ₽</span>
+										<span class="v-del-price">3180 ₽</span>
+									</div>
+								</div>
+							</label>
+						</div>
+
+
+					</div>
+
+					<div class="modal__rate_variable">
+
+						<div class="rate_variable_title">
+							<span>Трейдер:</span>
+						</div>
+						
+						
+
+						<div class="rate_variables">
+							<input type="radio" name='radio-select' data-month='1' data-price='675' id="radio-modal-4" value="Трейдер" class='rate-radio'>
+							<label for="radio-modal-4">
+								<div class="rate_variable">
+									<div class="variable_month">1 мес.</div>
+									<div class="variable_price">
+										<span class="v-actual-price">675 ₽</span>
+										<span class="v-del-price">899 ₽</span>
+									</div>
+								</div>
+							</label>
+
+							<input type="radio" name='radio-select' id="radio-modal-5" data-month='3' data-price='1725' value="Трейдер" class='rate-radio'>
+							<label for="radio-modal-5">
+								<div class="rate_variable">
+									<div class="variable_month">3 мес.</div>
+									<div class="variable_price">
+										<span class="v-actual-price">1725 ₽</span>
+										<span class="v-del-price">2300 ₽</span>
+									</div>
+								</div>
+							</label>
+							
+							<input type="radio" name='radio-select' id="radio-modal-6" data-month='6' data-price='3099' value="Трейдер" class='rate-radio'>
+							<label for="radio-modal-6">
+								<div class="rate_variable">
+									<div class="variable_month">6 мес.</div>
+									<div class="variable_price">
+										<span class="v-actual-price">3099 ₽</span>
+										<span class="v-del-price">3999 ₽</span>
+									</div>
+								</div>
+							</label>
+						</div>
+
+
+					</div>
+
+					<div class="modal__rate_variable">
+
+						<div class="rate_variable_title">
+							<span>All inclusive:</span>
+						</div>
+						
+						
+
+						<div class="rate_variables">
+							<input type="radio" name='radio-select' id="radio-modal-7" data-month='1' data-price='1299' value="All inclusive" class='rate-radio'>
+							<label for="radio-modal-7">
+								<div class="rate_variable">
+									<div class="variable_month">1 мес.</div>
+									<div class="variable_price">
+										<span class="v-actual-price">1299 ₽</span>
+										<span class="v-del-price">1699 ₽</span>
+									</div>
+								</div>
+							</label>
+
+							<input type="radio" name='radio-select' id="radio-modal-8" data-month='3' data-price='3459' value="All inclusive" class='rate-radio'>
+							<label for="radio-modal-8">
+								<div class="rate_variable">
+									<div class="variable_month">3 мес.</div>
+									<div class="variable_price">
+										<span class="v-actual-price">3459 ₽</span>
+										<span class="v-del-price">4599 ₽</span>
+									</div>
+								</div>
+							</label>
+							
+							<input type="radio" name='radio-select' id="radio-modal-9" data-month='6' data-price='6399' value="All inclusive" class='rate-radio'>
+							<label for="radio-modal-9">
+								<div class="rate_variable">
+									<div class="variable_month">6 мес.</div>
+									<div class="variable_price">
+										<span class="v-actual-price">6399 ₽</span>
+										<span class="v-del-price">8499 ₽</span>
+									</div>
+								</div>
+							</label>
+						</div>
+
+
+					</div>
+				</div>
+				
+			</div>
+				
+			<div class="modal_button">
+				<button form='modal__form'>Сделать заказ</button>
+			</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="success__modal_wrapper hide-modal">
+		<div class="success__modal">
+			<div class="success__modal_title">
+				<h3>Ваша заявка принята</h3>
+				<span class="modal__close"><i class="fas fa-times"></i></span>
+			</div>
+	
+			<div class="success__modal_text">
+				<span>Спасибо за проявленное доверие, скоро с Вами свяжется наш менеджер и уточнит все детали.</span><br>
+				<span>До встречи в команде <span class="success-name">«Money Way»</span></span>
+			</div>
+		</div>
+	</div>
+
+	<script src="./script/script.js"></script>
+	<script src="./script/charts.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+/* MAIN TITLE */
+.content-wrapper {
+	max-width: 1260px;
+	height: 100%;
+	margin: 0 auto;
+}
+
+.content__page_title {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100vh;
+
+	.page_title__text span {
+		@include bgTitle;
+		font-size: 2.5em;
+		font-weight: 400;
+		color: #fff;
+	}
+
+	.page_title span {
+		background: linear-gradient(to right, #009FB8, #E77D7F, #B64694);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		font-size: 3em;
+		font-weight: 500;
+		color: #fff;
+	 }
+}
+
+.animate__animated.animate__fadeIn {
+	--animate-delay: 1.5s;
+}

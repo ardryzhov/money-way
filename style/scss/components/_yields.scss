@@ -1,0 +1,193 @@
+/* YIELDS */
+.content__yield_title {
+	height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	span {
+		@include bgTitle;
+		text-align: center;
+		font-size: 2.5em;
+		font-weight: 400;
+		color: #fff;
+	}
+}
+
+.content__yield-example {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: space-between;
+	justify-content: space-between;
+}
+
+.example-yield {
+	width: 400px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	.yield__title h3 {
+		font-size: 26px;
+		text-align: center;
+		color: #fff;
+		margin: 10px 0px;
+		letter-spacing: 3px;
+	}
+
+	.yield__text {
+		line-height: 20px;
+
+		span {
+			color: #fff;
+			font-size: 1.1em;
+			display: inline-block;
+			margin: 10px 0px;
+		}
+
+		:nth-child(4) {
+			color: #000;
+		}
+	}
+}
+
+.yield-mw {
+	width: 100%;
+	display: flex;
+	margin: 10px 0px;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	.yield__mw-flex {
+		width: 850px;
+		height: 250px;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: flex-start;
+		align-items: center;
+	}
+}
+
+.yield-mw_slider-window {
+	width: 100%;
+	height: 300px;
+	display: flex;
+	overflow: hidden;
+	position: relative;
+}
+
+.yield-mw_slider-line {
+	height: 300px;
+	margin: 0 auto;
+	transition: .5s ease;
+	position: relative;
+}
+ 
+.mw_slider-item {
+	height: 300px;
+	min-width: 100%;
+	opacity: 0;
+	position: absolute;
+
+	&.active-slide {
+		transform: translateX(-50%);
+		transition: .5s ease;
+		opacity: 1;
+	}
+}
+
+.btns__slider {
+	display: flex;
+	justify-content: space-evenly;
+	width: 80px;
+	cursor: pointer;
+
+	.btn-slider {
+		width: 15px;
+		height: 15px;
+		background-color: rgba(255, 255, 255, 0.3);
+		border-radius: 50%;
+		transition: .5s ease;
+	}
+
+	.btn-slider.active-slide-btn {
+		transition: .5s ease;
+		transform: scale(1.3);
+		background-color: white;
+	}
+}
+
+.yield__mw-type {
+	width: 500px;
+
+	.mw_type-title h3 {
+		text-align: center;
+		font-size: 20px;
+		color: #000;
+	}
+
+	.mw_type-text div {
+		font-size: 17px;
+		color: #000;
+	}
+
+	.mw_type-text div span {
+		text-decoration: underline;
+		text-transform: uppercase;
+		font-weight: 600;
+	}
+}
+
+.mw-sectors_title h3 {
+	text-align: center;
+	font-size: 20px;
+	color: #000;
+}
+
+.yield-mw__image {
+	width: 500px;
+	display: flex;
+	justify-content: center;
+
+	.chart-mw {
+		height: 260px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+.yield-mw-title h3 {
+	@include bgMoneyWay;
+	font-size: 2.5em;
+	font-weight: 500;
+	color: #fff;
+	margin-bottom: 0;
+}
+
+.yield-mw .yield-mw-text,
+.yield-mw .yield-mw-title,
+.yield-mw .yeild__image {
+  max-width: 400px;
+}
+
+.yield-mw .yield-mw-text {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+ }
+ 
+.yield-mw .yield-mw-text span {
+	color: #000;
+}
+ 
+#SP, #DJ, #Nasd, #moneyWay {
+	background-color: #fff;
+}
+ 
+.fa-train, .fa-rocket, .fa-gripfire {
+	color: red;
+}

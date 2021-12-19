@@ -1,0 +1,97 @@
+/* SUCCESS MODAL */
+.success__modal_wrapper {
+	@include bgBlurBlack(0.5, 5px);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+
+	&.hide-modal {
+		pointer-events: none;
+		opacity: 0;
+		visibility: hidden;
+		transition: .2s linear;
+	}
+
+	&.show-modal {
+		opacity: 1;
+		pointer-events: all;
+		transition: .2s linear;
+	}
+
+	.success__modal {
+		width: 400px;
+		height: 200px;
+		background-color: #000;
+		border-radius: 10px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: center;
+
+		.success__modal_title {
+			width: 100%;
+			color: #fff;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			h3 {
+				text-align: center;
+				font-size: 24px;
+				width: 80%;
+			}
+
+			span {
+				width: 10%;
+				cursor: pointer;
+			}
+		}
+
+		.success__modal_text {
+			width: 80%;
+			color: #fff;
+
+			.success-name {
+				@include bgMoneyWay;
+				font-size: 16px;
+				font-weight: 600;
+			}
+		}
+	}
+}
+
+.invalid__alert {
+	position: fixed;
+	z-index: 1000000;
+	top: 0;
+	left: 50%;
+	border: 1px solid #fff;
+	background-color: rgba(204, 204, 204, 0.8);
+	border-radius: 5px;
+	transform: translate(-50%);
+	transition: -webkit-transform .4s linear;
+	transition: transform .4s linear;
+	transition: transform .4s linear, -webkit-transform .4s linear;
+
+	&.hide-invalid-alert {
+		transition: transform .4s linear;
+		transform: translate(-50%, -150%);
+	}
+
+	&.show-invalid-alert {
+		transition: transform .4s linear;
+		transform: translate(-50%, calc(50px + 3%));
+	}
+
+	span {
+		display: inline-block;
+		padding: 15px 20px;
+		color: #000;
+	}
+}

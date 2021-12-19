@@ -1,0 +1,61 @@
+@mixin bgMoneyWay {
+	background: linear-gradient(to right, #009FB8, #E77D7F, #B64694);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+
+@mixin bgTitle {
+	background: linear-gradient(to top, #000, #ccc, #fff);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+
+@mixin bgBlurWhite ($opacity, $blur: 5px) {
+	background-color: rgba(255, 255, 255, $opacity);
+	backdrop-filter: blur($blur);
+}
+
+
+@mixin bgBlurBlack ($opacity, $blur: 5px) {
+	background: rgba(0, 0, 0, $opacity);
+	backdrop-filter: blur($blur);
+}
+
+
+@mixin cardBg ($src) {
+	background: url($src);
+	background-size: cover;
+	background-position: center;
+}
+
+@mixin cardBtnC ($opacity) {
+	opacity: $opacity;
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	color: #fff;
+	font-size: 20px;
+	background-color: #e54343;
+	border: 0;
+	border-radius: 50%;
+	box-shadow: 0px 2px 30px rgba(0, 0, 0, .5);
+	position: absolute;
+	top: -27px;
+	right: 17px;
+	cursor: pointer;
+	outline: none;
+	transition: opacity .3s ease-in-out;
+}
+
+
+@mixin del-price {
+	content: '';
+	border-bottom: 2px solid red;
+	position: absolute;
+	left: -5px;
+	width: 120%;
+	height: 50%;
+	transform: rotate(-12deg);
+}

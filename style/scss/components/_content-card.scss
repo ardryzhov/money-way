@@ -1,0 +1,206 @@
+/* CONTENT CARDS */
+.card__container {
+	height: 100%;
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	width: inherit;
+	height: 1100px;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 1100px;
+		z-index: -10;
+		background-color: #30bfa5;
+		transition: .5s ease-in-out;
+		clip-path: circle(350px at center);
+	}
+	
+	&:hover .card__person {
+		top: 50%;
+		left: 50%;
+		z-index: 1;
+		opacity: 1;
+		transform: translateX(calc(-50% + calc(350px * var(--i)))) translateY(-100%) rotate(0deg) skew(0deg, 0deg) scale(1);
+	}
+
+	&:hover .card__person:nth-child(4) {
+		top: 50%;
+		left: 50%;
+		z-index: 1;
+		opacity: 1;
+		transform: translateX(calc(-300% + calc(300px * var(--i)))) translateY(1%);
+	}
+
+	&:hover .card__person:nth-child(5) {
+		top: 50%;
+		left: 50%;
+		z-index: 1;
+		opacity: 1;
+		transform: translateX(calc(-300% + calc(330px * var(--i)))) translateY(1%);
+	}
+
+	&:hover::before {
+		-webkit-transition: .3s ease-in-out;
+		transition: .3s ease-in-out;
+		-webkit-clip-path: circle(0px at center);
+				  clip-path: circle(0px at center);
+	}
+}
+
+.content__card_title {
+	position: relative;
+	margin: 10px 0px;
+
+	h3 {
+		text-align: center;
+		font-size: 2.5em;
+	}
+}
+
+.card__person {
+	margin: 10px 5px;
+	transition: .3s ease-in-out;
+	position: absolute;
+	top: 250px;
+	left: 50%;
+	transform: translateX(-50%) translateY(calc(30px * var(--i))) rotate(40deg) skew(-20deg, -10deg) scale(0.9);
+	width: 310px;
+	height: 500px;
+	border-radius: 10px;
+	box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
+	overflow: hidden;
+	margin: 0 10px;
+	z-index: calc(-1 * var(--i));
+	transition-delay: calc(.1s * var(--i));
+
+	&:nth-child(2) {
+		transition-delay: calc((.1s * var(--i))/2);
+		opacity: .9;
+	}
+
+	&:nth-child(3) {
+		transition-delay: calc((.1s * var(--i))/2);
+		opacity: .8;
+	}
+
+	&:nth-child(4) {
+		transition-delay: calc((.1s * var(--i))/2);
+		opacity: .7;
+	}
+
+	&:nth-child(5) {
+		transition-delay: calc((.1s * var(--i))/2);
+		opacity: .6;
+	}
+}
+
+.card-1 .card__top {
+	@include cardBg("../img/card-image/tyler.jpg")
+}
+
+.card-2 .card__top {
+	@include cardBg("../img/card-image/chloe.jpg")
+}
+ 
+.card-3 .card__top {
+	@include cardBg("../img/card-image/JoshuaDun.jpg")
+}
+ 
+.card-4 .card__top {
+	@include cardBg("../img/card-image/ElizabetOlsen.jpg")
+}
+ 
+.card-5 .card__top {
+	@include cardBg("../img/card-image/Gosling.jpg")
+}
+
+.card__top {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transition: all .3s ease-in-out;
+	padding-top: 10px;
+
+	.card__front {
+		margin: 100px 0px 0px 30px;
+
+		.card__person_title span {
+			color: #fff;
+			font-size: 3.5rem;
+			font-family: 'Lobster', cursive;
+			text-shadow: 1px 1px 1px #000;
+			letter-spacing: 1px;
+		}
+
+		.card__btn {
+			background: transparent;
+			border: 1px solid #eee;
+			padding: 10px 50px;
+			border-radius: 30px;
+			color: #eee;
+			text-shadow: 1px 1px 1px #000;
+			font-weight: 700;
+			box-shadow: 1px 1px 1px #000;
+			cursor: pointer;
+			outline: none;
+			margin: 30px 0 0 0;
+		}
+	}
+}
+
+.card__person.on .card__top {
+	transition: all .4s ease-in-out;
+	height: 50%;
+	background-position: center;
+}
+
+.card__person .card__front {
+	transform: translateY(0);
+	transition: all .4s ease-in-out;
+}
+ 
+.card__person.on .card__front {
+	transform: translateY(-30%);
+	transition: all .4s ease-in-out;
+}
+ 
+.card__person.on .card__btn {
+	opacity: 0;
+	cursor: auto;
+}
+
+.card__info {
+	background-color: #fff;
+	width: 100%;
+	height: 50%;
+	position: relative;
+	text-align: center;
+
+	.finance_analytic {
+		padding: 20px 0px;
+		font-size: 20px;
+		font-family: 'Poppins', sans-serif;
+		font-weight: 500;
+		font-style: italic;
+		color: #525050;
+	}
+
+	.card__info_career {
+		overflow-y: auto;
+		padding: 10px;
+	}
+}
+
+.card__person.on .card__btn_c {
+	@include cardBtnC(1);
+}
+
+.card__btn_c {
+	@include cardBtnC(0);
+}
