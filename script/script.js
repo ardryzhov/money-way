@@ -148,7 +148,7 @@ const promoEndDay = document.querySelector('.promo_end_day'),
 let thisDay = new Date().getDate() + 2,
 	 thisMonth = new Date().getMonth();
 
-const deadline = `2021-${thisMonth + 1}-${thisDay}`;
+const deadline = `${new Date().getFullYear()}-${thisMonth + 1}-${thisDay}`;
 
 const createPromoDate = (day, month) => {
 	promoEndDay.textContent = day;
