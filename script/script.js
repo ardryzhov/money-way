@@ -300,7 +300,9 @@ rateCardBtn.forEach(btn => {
 		modalRate.forEach(check => {
 			if (check.checked) {
 				checkedRadio(check);
+				console.log('hello')
 			} else {
+				console.log('faal')
 				return;
 			}
 		})
@@ -315,7 +317,7 @@ function checkedRadio(check) {
 			checkDelPrice = labelChildren[2].textContent,
 			modalTitle = document.querySelector('.modal__rate_title h3'),
 			modalCheckRate = document.querySelector('.modal__rate_check');
-	
+
 	modalCheckRate.innerHTML = '';
 	modalTitle.textContent = 'Вы выбрали тариф:';
 	modalCheckRate.insertAdjacentHTML('afterbegin', `
